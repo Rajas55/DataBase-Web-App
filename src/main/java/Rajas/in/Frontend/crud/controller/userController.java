@@ -28,8 +28,8 @@ public class userController {
     @GetMapping("/users/new")
     public String showForm(Model model){
         model.addAttribute("user",new user());
-        model.addAttribute("pageTitle","New Employee");
-        model.addAttribute("pageHeading","Add New Employee");
+        model.addAttribute("pageTitle","New User");
+        model.addAttribute("pageHeading","Add New User");
         model.addAttribute("edit","edit");
         return "new";
     }
@@ -46,8 +46,8 @@ public class userController {
         try {
             user user = userService.get(id);
             model.addAttribute("user",user);
-            model.addAttribute("pageTitle","Edit Employee");
-            model.addAttribute("pageHeading","Edit Employee, Id: "+id);
+            model.addAttribute("pageTitle","Edit User");
+            model.addAttribute("pageHeading","Edit User, Id: "+id);
 
 //            model.addAttribute("disableSecondButton",true );
             return "new";
